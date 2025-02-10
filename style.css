@@ -24,8 +24,8 @@ h1 {
 }
 
 img {
-    width: 50%; /* Adjusted image size to 50% */
-    max-width: 400px;
+    width: 40%; /* Reduced image size further to 40% */
+    max-width: 300px; /* Lower max-width to prevent the image from being too big */
     border-radius: 10px;
     margin-bottom: 30px;
     z-index: 1;
