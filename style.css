@@ -1,55 +1,83 @@
+/* Global styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    text-align: center;
-    color: #fff;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* Main container taking the full viewport height */
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Title styling */
 h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  margin: 20px;
 }
 
+/* Image styling with size limits */
 .valentine-image {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* Button container set to relative for absolute positioning inside */
 .button-container {
-    display: flex;
-    gap: 20px;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
 }
 
-button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
+/* Yes button is fixed in one spot inside the container */
 #yes-btn {
-    background-color: #ff66b2;
-    color: white;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+/* No button starts in a fixed spot, then moves on hover */
 #no-btn {
-    background-color: #555;
-    color: white;
-    position: absolute;
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effects */
+#yes-btn:hover {
+  background-color: #ff3385;
+}
+
+#no-btn:hover {
+  background-color: #333;
 }
