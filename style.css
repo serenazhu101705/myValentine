@@ -1,103 +1,55 @@
-/* General Page Style */
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: #f8c8d8; /* Soft pink background */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 h1 {
-  font-size: 2em;
-  color: #333;
-  margin: 20px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* First Page */
-.first-page {
-  position: relative;
-  height: 100vh;
-  background-color: #f8c8d8; /* Soft pink background */
+.valentine-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.first-page img {
-  width: 40%; /* Smaller image size */
-  max-width: 250px;
-  height: auto;
-  margin-top: 50px;
+.button-container {
+    display: flex;
+    gap: 20px;
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 1.2em;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  margin: 20px 10px;
-  transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.yes-btn {
-  background-color: #ff69b4; /* Hot pink color */
-  color: white;
+#yes-btn {
+    background-color: #ff66b2;
+    color: white;
 }
 
-.no-btn {
-  background-color: #d3d3d3; /* Light gray */
-  color: white;
-}
-
-.yes-btn:hover {
-  background-color: #ff1493; /* Darker pink */
-}
-
-.no-btn:hover {
-  background-color: #c0c0c0; /* Slightly darker gray */
-}
-
-/* Position Buttons */
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.button-container button {
-  margin: 0 15px;
-}
-
-/* Animation for the No Button */
-.no-btn:hover {
-  position: relative;
-  animation: moveButton 0.5s forwards;
-}
-
-@keyframes moveButton {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 150px;
-  }
-}
-
-/* Second Page */
-.second-page {
-  background-color: #ffebcd; /* Soft blush pink background */
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.second-page img {
-  width: 40%; /* Smaller image size */
-  max-width: 250px;
-  height: auto;
-}
-
-.second-page h1 {
-  font-size: 2em;
-  color: #333;
+#no-btn {
+    background-color: #555;
+    color: white;
+    position: absolute;
 }
