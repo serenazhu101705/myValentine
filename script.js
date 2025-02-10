@@ -7,9 +7,9 @@ noButton.addEventListener("mouseenter", function() {
     // Set the flag to true to prevent further movement
     hasMoved = true;
 
-    // Get random positions on the screen
-    let randomX = Math.floor(Math.random() * window.innerWidth);
-    let randomY = Math.floor(Math.random() * window.innerHeight);
+    // Get random positions within the screen boundaries
+    let randomX = Math.floor(Math.random() * (window.innerWidth - noButton.offsetWidth));
+    let randomY = Math.floor(Math.random() * (window.innerHeight - noButton.offsetHeight));
 
     // Move the "No" button to a random position
     this.style.left = randomX + "px";
