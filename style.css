@@ -25,7 +25,7 @@ h1 {
   margin: 20px;
 }
 
-/* Image styling with a maximum width */
+/* Image styling with size limits */
 .valentine-image {
   width: 300px;
   max-width: 90%;
@@ -35,40 +35,37 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Button container: width set to match the image and fixed height */
+/* Button container: width set to match the image */
 .button-container {
   position: relative;
   width: 300px;
-  height: 100px;
+  height: 70px;
   margin: 0 auto;
 }
 
-/* Yes button: initially positioned on the left side of the container */
-#yes-btn {
-  position: absolute;
-  left: 25px;
-  top: 40px;
+/* Common button styling with fixed width */
+button {
+  width: 100px;
   font-size: 1.2rem;
-  padding: 10px 20px;
-  background-color: #ff66b2;
+  padding: 10px 0;  /* vertical padding only */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* No button: initially positioned on the right side */
+/* Yes button: initially positioned toward the left of the center */
+#yes-btn {
+  position: absolute;
+  left: 40px;  /* Calculated to center two 100px buttons with a 20px gap in a 300px container */
+  top: 15px;
+}
+
+/* No button: initially positioned toward the right of the center */
 #no-btn {
   position: absolute;
-  left: 150px;
-  top: 40px;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  background-color: #555;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  left: 160px;
+  top: 15px;
 }
 
 /* Button hover effects */
@@ -80,10 +77,11 @@ h1 {
   background-color: #333;
 }
 
-/* Yes page specific styling: Taylor Swift Eras–themed background and fallback color */
+/* Specific styles for the Yes page */
 body.yes-page {
   background: url('taylor_swift_eras_bg.jpg') no-repeat center center fixed;
   background-size: cover;
+  /* Fallback background color */
   background-color: #ffcce6;
 }
 
