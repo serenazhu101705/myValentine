@@ -1,14 +1,14 @@
-document.getElementById("yesBtn").addEventListener("click", function() {
-    document.querySelector(".container").style.display = "none";
-    document.getElementById("congratulations").style.display = "block";
+document.getElementById("yesBtn").addEventListener("click", function () {
+    window.location.href = "yes.html";
 });
 
-document.getElementById("noBtn").addEventListener("click", function() {
-    const button = document.getElementById("noBtn");
-    const randomX = Math.random() * (window.innerWidth - button.offsetWidth);
-    const randomY = Math.random() * (window.innerHeight - button.offsetHeight);
+document.getElementById("noBtn").addEventListener("mouseover", function () {
+    let x = Math.random() * window.innerWidth - 100;
+    let y = Math.random() * window.innerHeight - 50;
 
-    button.style.position = "absolute";
-    button.style.left = randomX + "px";
-    button.style.top = randomY + "px";
+    x = x < 0 ? 10 : x;
+    y = y < 0 ? 10 : y;
+
+    this.style.left = x + "px";
+    this.style.top = y + "px";
 });
