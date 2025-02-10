@@ -3,26 +3,26 @@ function moveNoButton() {
   const noButton = document.getElementById("no-btn");
   const container = document.querySelector(".button-container");
   
-  // Get container and button dimensions.
+  // Get dimensions of the container and the button.
   const containerWidth = container.clientWidth;
   const containerHeight = container.clientHeight;
   const buttonWidth = noButton.offsetWidth;
   const buttonHeight = noButton.offsetHeight;
   
-  // Calculate maximum left and top values so the button remains fully inside.
+  // Ensure the button stays fully inside the container.
   const maxX = containerWidth - buttonWidth;
   const maxY = containerHeight - buttonHeight;
   
-  // Generate random positions.
+  // Generate random positions within the allowed range.
   const randomX = Math.floor(Math.random() * maxX);
   const randomY = Math.floor(Math.random() * maxY);
   
-  // Set new position for the "No" button.
+  // Set the new position for the "No" button.
   noButton.style.left = `${randomX}px`;
   noButton.style.top = `${randomY}px`;
 }
 
-// Redirects to the "Yes" page.
+// Redirects to the Yes page.
 function goToYesPage() {
   window.location.href = "yes.html";
 }
