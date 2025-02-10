@@ -25,7 +25,7 @@ h1 {
   margin: 20px;
 }
 
-/* Image styling with size limits */
+/* Image styling with responsive limits */
 .valentine-image {
   width: 300px;
   max-width: 90%;
@@ -35,53 +35,45 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Button container: width set to match the image */
+/* Button container: center the buttons inline */
 .button-container {
-  position: relative;
-  width: 300px;
-  height: 70px;
-  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
-/* Common button styling with fixed width */
-button {
-  width: 100px;
+/* Styling for both buttons */
+.button-container button {
   font-size: 1.2rem;
-  padding: 10px 0;  /* vertical padding only */
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 0 10px;
 }
 
-/* Yes button: initially positioned toward the left of the center */
+/* Yes button styling */
 #yes-btn {
-  position: absolute;
-  left: 40px;  /* Calculated to center two 100px buttons with a 20px gap in a 300px container */
-  top: 15px;
+  background-color: #ff66b2;
 }
-
-/* No button: initially positioned toward the right of the center */
-#no-btn {
-  position: absolute;
-  left: 160px;
-  top: 15px;
-}
-
-/* Button hover effects */
 #yes-btn:hover {
   background-color: #ff3385;
 }
 
+/* No button styling (initially static within the container);
+   Its position will be changed to fixed by JavaScript when hovered */
+#no-btn {
+  background-color: #555;
+}
 #no-btn:hover {
   background-color: #333;
 }
 
-/* Specific styles for the Yes page */
+/* Taylor Swift Eras–themed styling for the Yes page */
 body.yes-page {
   background: url('taylor_swift_eras_bg.jpg') no-repeat center center fixed;
   background-size: cover;
-  /* Fallback background color */
+  /* Fallback color */
   background-color: #ffcce6;
 }
 
@@ -90,4 +82,19 @@ body.yes-page {
   color: #ff66b2;
   font-size: 1.5rem;
   margin: 0 5px;
+}
+
+/* Mobile friendly adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .valentine-image {
+    width: 90%;
+  }
+  .button-container button {
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin: 0 5px;
+  }
 }
