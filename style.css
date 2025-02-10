@@ -8,24 +8,24 @@ body {
   padding: 0;
 }
 
-/* Main container taking the full viewport height */
+/* Main container centers everything vertically and horizontally */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Title styling */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   margin: 20px;
 }
 
-/* Image styling with size limits */
+/* Image styling with a maximum width */
 .valentine-image {
   width: 300px;
   max-width: 90%;
@@ -35,20 +35,19 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Button container set to relative for absolute positioning inside */
+/* Button container: width set to match the image and fixed height */
 .button-container {
   position: relative;
-  width: 100%;
-  height: 120px;
-  margin-top: 20px;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
 }
 
-/* Yes button is fixed in one spot inside the container */
+/* Yes button: initially positioned on the left side of the container */
 #yes-btn {
   position: absolute;
-  left: 30%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 25px;
+  top: 40px;
   font-size: 1.2rem;
   padding: 10px 20px;
   background-color: #ff66b2;
@@ -58,12 +57,11 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-/* No button starts in a fixed spot, then moves on hover */
+/* No button: initially positioned on the right side */
 #no-btn {
   position: absolute;
-  left: 70%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 150px;
+  top: 40px;
   font-size: 1.2rem;
   padding: 10px 20px;
   background-color: #555;
@@ -73,7 +71,7 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-/* Hover effects */
+/* Button hover effects */
 #yes-btn:hover {
   background-color: #ff3385;
 }
@@ -82,15 +80,14 @@ h1 {
   background-color: #333;
 }
 
-/* Specific styles for the Yes page */
+/* Yes page specific styling: Taylor Swift Eras–themed background and fallback color */
 body.yes-page {
   background: url('taylor_swift_eras_bg.jpg') no-repeat center center fixed;
   background-size: cover;
-  /* If no image is provided, this fallback solid color will show: */
   background-color: #ffcce6;
 }
 
-/* Optional heart styling on the Yes page */
+/* Heart decoration styling on the Yes page */
 .heart {
   color: #ff66b2;
   font-size: 1.5rem;
