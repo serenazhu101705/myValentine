@@ -13,20 +13,23 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    overflow: hidden; /* Prevents the page from overflowing if content is too large */
+    overflow: hidden; /* Prevents the page from overflowing */
+    padding: 20px; /* Adds space to avoid content being too close to the edges */
 }
 
 h1 {
-    font-size: 2em; /* Smaller font size for the heading */
+    font-size: 1.8em; /* Adjusted font size for readability */
     margin-bottom: 20px;
     color: #333;
+    z-index: 2; /* Makes sure the text is on top of any other elements */
 }
 
 img {
-    width: 50%; /* Adjusted the image size to 50% of the container's width */
-    max-width: 400px; /* Added max-width to prevent the image from getting too big */
+    width: 50%; /* Adjusted image size to 50% */
+    max-width: 400px; /* Ensures images don't get too large */
     border-radius: 10px;
-    margin-bottom: 20px; /* Adds some space below the image */
+    margin-bottom: 30px; /* Adds space between image and buttons */
+    z-index: 1; /* Ensures image stays behind the text */
 }
 
 .button-container {
@@ -35,11 +38,12 @@ img {
     display: flex;
     justify-content: center;
     gap: 20px;
+    z-index: 2; /* Keeps buttons in front of other content */
 }
 
 button {
     padding: 15px;
-    font-size: 1.2em; /* Reduced the button text size */
+    font-size: 1.2em; /* Adjusted button text size */
     cursor: pointer;
     border: 2px solid #333;
     background-color: #ff66b2;
