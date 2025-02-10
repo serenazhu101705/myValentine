@@ -1,40 +1,104 @@
+/* General Page Style */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
-
-.container {
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f5f5f5;
 }
 
 h1 {
-    font-size: 2em;
-    margin: 20px 0;
+  font-size: 2em;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* First Page */
+.first-page {
+  position: relative;
+  height: 100vh;
+  background-color: #fff0f5; /* Light pink background */
+}
+
+.first-page img {
+  width: 60%;
+  max-width: 300px;
+  height: auto;
+  margin-top: 50px;
 }
 
 button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-#noButton {
-    background-color: #ff0000;
-    color: #ffffff;
+.yes-btn {
+  background-color: #ff69b4; /* Hot pink color */
+  color: white;
 }
 
-#yesButton {
-    background-color: #00ff00;
-    color: #ffffff;
+.no-btn {
+  background-color: #d3d3d3; /* Light gray */
+  color: white;
 }
+
+.yes-btn:hover {
+  background-color: #ff1493; /* Darker pink */
+}
+
+.no-btn:hover {
+  background-color: #c0c0c0; /* Slightly darker gray */
+}
+
+/* Position Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.button-container button {
+  margin: 0 15px;
+}
+
+/* Animation for the No Button */
+.no-btn:hover {
+  position: relative;
+  animation: moveButton 0.5s forwards;
+}
+
+@keyframes moveButton {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
+/* Second Page */
+.second-page {
+  background-color: #ffebcd; /* Blush background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.second-page img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+}
+
+.second-page h1 {
+  font-size: 2em;
+  color: #333;
+}
+
