@@ -1,21 +1,16 @@
-let noButton = document.getElementById("noButton");
-let hasMoved = false; // Flag to ensure the button only moves once
+document.addEventListener('DOMContentLoaded', function() {
+    const noButton = document.getElementById('noButton');
+    const yesButton = document.getElementById('yesButton');
 
-noButton.addEventListener("mouseenter", function() {
-    if (hasMoved) return; // Only allow movement if it hasn't moved yet
+    noButton.addEventListener('mouseover', function() {
+        const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+        const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${x}px`;
+        noButton.style.top = `${y}px`;
+    });
 
-    // Set the flag to true to prevent further movement
-    hasMoved = true;
-
-    // Get random positions within the screen boundaries
-    let randomX = Math.floor(Math.random() * (window.innerWidth - noButton.offsetWidth));
-    let randomY = Math.floor(Math.random() * (window.innerHeight - noButton.offsetHeight));
-
-    // Move the "No" button to a random position
-    this.style.left = randomX + "px";
-    this.style.top = randomY + "px";
+    yesButton.addEventListener('click', function() {
+        window.location.href = 'yes.html';
+    });
 });
-
-function goToSecondPage() {
-    window.location.href = "yes.html";
-}
