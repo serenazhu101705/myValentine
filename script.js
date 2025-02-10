@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const yesButton = document.getElementById('yesButton');
 
     noButton.addEventListener('mouseover', function() {
-        const x = Math.random() * (window.innerWidth - noButton.clientWidth);
-        const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+        const maxX = window.innerWidth - noButton.clientWidth;
+        const maxY = window.innerHeight - noButton.clientHeight;
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
         noButton.style.position = 'absolute';
         noButton.style.left = `${x}px`;
         noButton.style.top = `${y}px`;
