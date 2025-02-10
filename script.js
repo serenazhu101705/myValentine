@@ -3,7 +3,7 @@ function moveNoButton() {
   const noButton = document.getElementById("no-btn");
   const container = document.querySelector(".button-container");
   
-  // Get dimensions of the container and the button
+  // Get dimensions of the container and the button.
   const containerWidth = container.clientWidth;
   const containerHeight = container.clientHeight;
   const buttonWidth = noButton.offsetWidth;
@@ -22,7 +22,7 @@ function moveNoButton() {
   noButton.style.top = `${randomY}px`;
 }
 
-// Redirects to the yes page.
+// Redirects to the Yes page.
 function goToYesPage() {
   window.location.href = "yes.html";
 }
