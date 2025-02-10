@@ -25,7 +25,7 @@ h1 {
 }
 
 img {
-    width: 30%; /* Further reduced image size to 30% */
+    width: 30%; /* Reduced image size */
     max-width: 250px; /* Lower max-width */
     border-radius: 10px;
     margin-bottom: 30px;
@@ -58,15 +58,13 @@ button:hover {
 
 .no-button {
     position: absolute; /* Absolute positioning for free movement */
-    transition: all 0.2s ease;
-    z-index: 3;
+    z-index: 3; /* Ensure it's in front of other content */
     left: 50%; /* Starts in the center */
     top: 50%; /* Starts in the center */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centers the button initially */
     pointer-events: all; /* Ensure button can still be clicked */
 }
 
-/* Make sure Yes button isn't hidden */
 #yesButton {
-    z-index: 4;
+    z-index: 4; /* Ensure Yes button is on top */
 }
