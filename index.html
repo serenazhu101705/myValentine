@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="IMG_4845.jpg" alt="Taylor Swift Eras Theme">
-        <h1>Will you be my Valentine, Jacklyn?</h1>
-        <button id="yesButton">Yes</button>
-        <button id="noButton">No</button>
+  <div class="first-page">
+    <img src="IMG_4845.jpg" alt="Proposal Image">
+    <h1>Will you be my Valentine, Jacklyn?</h1>
+    <div class="button-container">
+      <button class="yes-btn" onclick="goToSecondPage()">Yes</button>
+      <button class="no-btn" id="noBtn" onmouseover="moveButton()">No</button>
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
