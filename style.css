@@ -13,16 +13,20 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
+    overflow: hidden; /* Prevents the page from overflowing if content is too large */
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em; /* Smaller font size for the heading */
     margin-bottom: 20px;
+    color: #333;
 }
 
 img {
-    width: 80%;
+    width: 50%; /* Adjusted the image size to 50% of the container's width */
+    max-width: 400px; /* Added max-width to prevent the image from getting too big */
     border-radius: 10px;
+    margin-bottom: 20px; /* Adds some space below the image */
 }
 
 .button-container {
@@ -34,8 +38,8 @@ img {
 }
 
 button {
-    padding: 20px;
-    font-size: 1.5em;
+    padding: 15px;
+    font-size: 1.2em; /* Reduced the button text size */
     cursor: pointer;
     border: 2px solid #333;
     background-color: #ff66b2;
