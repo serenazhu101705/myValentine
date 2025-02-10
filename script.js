@@ -2,10 +2,8 @@
 function moveNoButton() {
   const noButton = document.getElementById("no-btn");
   
-  // If the button is still inside its initial container, remove it and append to the body.
-  if (noButton.parentElement !== document.body) {
-    document.body.appendChild(noButton);
-    // Set position to fixed so it’s positioned relative to the viewport.
+  // Change its positioning to fixed (if not already) so it can move anywhere in the viewport.
+  if (getComputedStyle(noButton).position !== "fixed") {
     noButton.style.position = "fixed";
   }
   
@@ -15,7 +13,7 @@ function moveNoButton() {
   const buttonWidth = noButton.offsetWidth;
   const buttonHeight = noButton.offsetHeight;
   
-  // Calculate maximum left and top values to keep the button fully visible.
+  // Calculate the maximum left and top values so the button remains fully visible.
   const maxX = viewportWidth - buttonWidth;
   const maxY = viewportHeight - buttonHeight;
   
