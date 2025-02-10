@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Will You Be My Valentine?</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="first-page">
-    <img src="IMG_4845.jpg" alt="Proposal Image">
-    <h1>Will you be my Valentine, Jacklyn?</h1>
-    <div class="button-container">
-      <button class="yes-btn" onclick="goToSecondPage()">Yes</button>
-      <button class="no-btn" id="noBtn" onmouseover="moveButton()">No</button>
+    <div class="container">
+        <h1>Will you be my Valentine, Jacklyn?</h1>
+        <img src="IMG_4845.jpg" alt="A special image" class="valentine-image">
+        <div class="button-container">
+            <button id="yes-btn" onclick="goToYesPage()">Yes</button>
+            <button id="no-btn" onmouseover="moveNoButton()">No</button>
+        </div>
     </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
