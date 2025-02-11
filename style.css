@@ -35,7 +35,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Button container: center the buttons inline */
+/* Button container: center the buttons inline under the image */
 .button-container {
   text-align: center;
   margin-top: 10px;
@@ -60,8 +60,8 @@ h1 {
   background-color: #ff3385;
 }
 
-/* No button styling (initially static within the container);
-   Its position will be changed to fixed by JavaScript when hovered */
+/* No button styling – initially it’s positioned within the container.
+   Once moved, its position will be controlled by JS (set to fixed). */
 #no-btn {
   background-color: #555;
 }
@@ -73,7 +73,7 @@ h1 {
 body.yes-page {
   background: url('taylor_swift_eras_bg.jpg') no-repeat center center fixed;
   background-size: cover;
-  /* Fallback color */
+  /* Fallback background color */
   background-color: #ffcce6;
 }
 
@@ -97,4 +97,47 @@ body.yes-page {
     padding: 8px 15px;
     margin: 0 5px;
   }
+}
+
+/* -------------------- */
+/* Styling for the letter page */
+body.letter-page {
+  background: #fdf6e3; /* Gentle, parchment-like background */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.letter-container {
+  background-color: #fff;
+  color: #333;
+  font-family: 'Georgia', serif;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.letter-container p {
+  margin-bottom: 1em;
+}
+
+.letter-container button {
+  display: block;
+  margin: 20px auto 0;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff66b2;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.letter-container button:hover {
+  background-color: #ff3385;
 }
