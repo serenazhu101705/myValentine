@@ -62,11 +62,35 @@ h1 {
 
 /* No button styling – initially it’s positioned within the container.
    Once moved, its position will be controlled by JS (set to fixed). */
-#no-btn {
+/*#no-btn {
   background-color: #555;
 }
 #no-btn:hover {
   background-color: #333;
+}
+/* No button styling */
+#no-btn {
+  background-color: #ff6961; /* Soft red */
+  color: white;
+  width: 80px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  font-size: 1.2rem; /* Consistent font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Only transition color, not size */
+  position: relative;
+  text-align: center;
+}
+
+/* Ensure the button doesn't shrink on hover */
+#no-btn:hover {
+  background-color: #ff3b30; /* Darker red */
+  width: 80px; /* Maintain fixed width */
+  height: 40px; /* Maintain fixed height */
+  font-size: 1.2rem; /* Keep font size the same */
+  padding: inherit; /* Keep padding the same */
+  border: inherit; /* Keep border the same */
 }
 
 /* Taylor Swift Eras–themed styling for the Yes page */
