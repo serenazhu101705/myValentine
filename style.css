@@ -60,7 +60,7 @@ h1 {
   background-color: #ff3385;
 }
 
-/* No button styling – initially positioned within the container.
+/* No button styling – initially it’s positioned within the container.
    Once moved, its position will be controlled by JS (set to fixed). */
 #no-btn {
   background-color: #555;
@@ -73,6 +73,7 @@ h1 {
 body.yes-page {
   background: url('taylor_swift_eras_bg.jpg') no-repeat center center fixed;
   background-size: cover;
+  /* Fallback background color */
   background-color: #ffcce6;
 }
 
@@ -101,7 +102,7 @@ body.yes-page {
 /* -------------------- */
 /* Styling for the letter page */
 body.letter-page {
-  background: #fdf6e3;
+  background: #fdf6e3; /* Gentle, parchment-like background */
   color: #333;
   padding: 20px;
   text-align: center;
