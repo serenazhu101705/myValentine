@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // For continuous background music: restore saved time and save every second.
+  // Select the audio element
+  var audio = document.getElementById("bg-music");
+
+  if (audio) {
+    // Autoplay the music when the page loads
+    audio.play().catch(error => console.log("Autoplay failed:", error));
+  }
+});
+
+// Ensure the music restarts when the page reloads or exits
+window.addEventListener("beforeunload", () => {
   var audio = document.getElementById("bg-music");
   if (audio) {
-    var savedTime = localStorage.getItem("musicTime");
-    if (savedTime) {
-      audio.currentTime = parseFloat(savedTime);
-    }
-    setInterval(function () {
-      localStorage.setItem("musicTime", audio.currentTime);
-    }, 1000);
+    audio.pause(); // Stop the audio
+    audio.currentTime = 0; // Reset audio to the beginning
   }
 });
 
