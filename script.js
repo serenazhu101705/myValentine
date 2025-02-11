@@ -6,25 +6,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Autoplay the music when the page loads
     audio.play().catch(error => console.log("Autoplay failed:", error));
   }
-});
 
-// Ensure the music restarts when the page reloads or exits
-window.addEventListener("beforeunload", () => {
-  var audio = document.getElementById("bg-music");
-  if (audio) {
-    audio.pause(); // Stop the audio
-    audio.currentTime = 0; // Reset audio to the beginning
+  // Ensure the No button starts next to the Yes button
+  var noButton = document.getElementById("no-btn");
+  var yesButton = document.getElementById("yes-btn");
+
+  if (noButton && yesButton) {
+    // Position the "No" button next to the "Yes" button
+    noButton.style.position = "relative";
+    noButton.style.left = "10px"; // Adjust the spacing between buttons
+    noButton.style.top = "0"; // Ensure it stays aligned
   }
 });
 
-// Moves the "No" button to a random position anywhere on the screen.
+// Moves the "No" button to a random position anywhere on the screen after hovering
 function moveNoButton() {
   var noButton = document.getElementById("no-btn");
 
-  // If the button is still inside its initial container, remove it and append to the body.
-  if (noButton.parentElement !== document.body) {
-    document.body.appendChild(noButton);
-    // Set its positioning to fixed so it’s relative to the viewport.
+  // Only move the button if it has already been positioned correctly
+  if (noButton.style.position !== "fixed") {
     noButton.style.position = "fixed";
   }
 
