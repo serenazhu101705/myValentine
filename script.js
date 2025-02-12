@@ -1,29 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
   var audio = document.getElementById("bg-music");
+  var playButton = document.getElementById("play-music-btn");
 
   if (audio) {
-    // Check if there's a saved playback time
     var savedTime = sessionStorage.getItem("musicTime");
     if (savedTime) {
       audio.currentTime = parseFloat(savedTime);
     }
 
-    // Autoplay music
-    audio.play().catch(error => console.log("Autoplay failed:", error));
+    var playPromise = audio.play();
 
-    // Save the current time every second
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        playButton.style.display = "block";
+      });
+    }
+
     setInterval(function () {
       sessionStorage.setItem("musicTime", audio.currentTime);
     }, 1000);
   }
 });
 
-// Ensure the music resets when the user exits the website
+function startMusic() {
+  var audio = document.getElementById("bg-music");
+  if (audio) {
+    audio.play();
+    document.getElementById("play-music-btn").style.display = "none";
+  }
+}
+
 window.addEventListener("beforeunload", function () {
   if (!document.referrer.includes(window.location.origin)) {
-    sessionStorage.removeItem("musicTime"); // Clear stored time if leaving the site
+    sessionStorage.removeItem("musicTime");
   }
 });
+
+// Function to check the password before allowing access to letter.html
+function checkPassword() {
+  var correctPassword = "swiftie"; // Change this to your actual password
+  var userInput = prompt("Enter the secret password to open the letter:");
+
+  if (userInput === correctPassword) {
+    window.location.href = "letter.html";
+  } else {
+    alert("Incorrect password! Try again. 💖");
+  }
+}
 
 // Moves the "No" button to a random position anywhere on the screen after hovering
 function moveNoButton() {
